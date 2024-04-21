@@ -384,7 +384,7 @@
     </tr>
     <tr>
       <td>Explanation</td>
-      <td><p>For account_id, fetch all destinations</p></td>
+      <td><p>For given account_id, fetch all destinations</p></td>
     </tr>
   </tbody>
 </table>
