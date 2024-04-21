@@ -39,7 +39,42 @@
         </pre>
       </td>
     </tr>
-  </tbody> 
+  </tbody>
 </table>
-
 <hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/accounts/"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>"POST"</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>
+        <pre>
+          {
+            "email": "string",
+            "name": "string"
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          {
+            "email": "string",
+            "name": "string"
+          }
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+
