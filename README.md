@@ -11,12 +11,6 @@
 
 <h2>APIs descriptions</h2>
 <table>
-  <thead>
-    <tr>
-      <td>Key</td>
-      <td>Value</td>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>Endpoint</td>
@@ -33,15 +27,19 @@
     <tr>
       <td>Response</td>
       <td>
-        [
-          {
-            "email": "string",
-            "name": "string",
-            "id": 0,
-            "app_secret_token": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-          }
-        ]
+        <pre>
+          [
+            {
+              "email": "string",
+              "name": "string",
+              "id": 0,
+              "app_secret_token": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+          ]
+        </pre>
       </td>
     </tr>
   </tbody> 
 </table>
+
+<hr>
