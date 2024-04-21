@@ -33,19 +33,6 @@ async def get_all_accounts(db: Session = Depends(get_db)):
     except:
         raise HTTPException(status_code=500, detail="something went wrong")
 
-@router.get('/accounts/destinations/{account_id}', response_model=List[schemas.Destination])
-async def get_destinations_by_account_id(account_id : int, db: Session = Depends(get_db)):
-    try:
-        destinations = DestinationsService().get_destinations_by_account_id(account_id, db)
-        
-        if not destinations:
-            raise HTTPException(status_code=404, detail="Destination not found")
-        return destinations
-    except HTTPException as http_exc:
-        raise http_exc
-    except:
-        raise HTTPException(status_code=500, detail="Something went wrong")
-
 
 @router.put('/accounts/{account_id}', response_model=schemas.Account)
 async def update_account(account_id: int, account: schemas.Account, db: Session = Depends(get_db)):
@@ -108,12 +95,24 @@ async def delete_destination(destination_id: int, destination: schemas.Destinati
         raise HTTPException(status_code=404, detail="Destination not found")
 
 
+@router.get('/destinations/accounts/{account_id}', response_model=List[schemas.Destination])
+async def get_destinations_by_account_id(account_id : int, db: Session = Depends(get_db)):
+    try:
+        destinations = DestinationsService().get_destinations_by_account_id(account_id, db)
+        
+        if not destinations:
+            raise HTTPException(status_code=404, detail="Destination not found")
+        return destinations
+    except HTTPException as http_exc:
+        raise http_exc
+    except:
+        raise HTTPException(status_code=500, detail="Something went wrong")
+    
+
 # Data pusher
 @router.post('/server/incoming_data/')
 async def receive_data(incoming_data: schemas.ServerIncomingData, app_secret_token: str = None, db: Session = Depends(get_db)):
     try:
-        # if not isinstance(incoming_data.data, dict):
-        #     raise HTTPException(status_code=400, detail="Invalid Data Format")
         if not app_secret_token:
             raise HTTPException(status_code=401, detail="Unauthenticated")
         
@@ -121,7 +120,7 @@ async def receive_data(incoming_data: schemas.ServerIncomingData, app_secret_tok
         if not account:
             raise HTTPException(status_code=404, detail="app_secret_token not found")
         
-        destinations = DestinationsService().get_destinations_by_account_id(account, db)
+        destinations = DestinationsService().get_destinations_by_account_id(account.id, db)
         if not destinations:
             raise HTTPException(status_code=404, detail="No destinations found for the given app_secret_token")
         

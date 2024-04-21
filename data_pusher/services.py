@@ -68,8 +68,8 @@ class DestinationsService:
         db.commit()
         return db_destination
     
-    def get_destinations_by_account_id(self, account, db):
-        return db.query(models.Destinations).filter(models.Destinations.account_id == account.id).all()
+    def get_destinations_by_account_id(self, account_id, db):
+        return db.query(models.Destinations).filter(models.Destinations.account_id == account_id).all()
     
     def send_data_to_destinations(self, data, destinations, db):
         for dest in destinations:
