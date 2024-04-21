@@ -7,3 +7,41 @@
   <li> Install all packages using "pip install -r requirements.txt"</li>
   <li> Command to start API server: "python3 main.py startserver"</li>
 </ul>
+
+
+<h2>APIs descriptions</h2>
+<table>
+  <thead>
+    <tr>
+      <td>Key</td>
+      <td>Value</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/accounts/"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>"GET"</td>
+    </tr>
+    <tr>
+      <td>Query Params</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        [
+          {
+            "email": "string",
+            "name": "string",
+            "id": 0,
+            "app_secret_token": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+          }
+        ]
+      </td>
+    </tr>
+  </tbody> 
+</table>
