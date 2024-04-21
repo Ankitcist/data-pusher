@@ -77,4 +77,43 @@
   </tbody>
 </table>
 <hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/accounts/{account_id}"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>"PUT"</td>
+    </tr>
+    <tr>
+      <td>Query Params</td>
+      <td>account_id: int</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>
+        <pre>
+          {
+            "email": "string",
+            "name": "string"
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          {
+            "email": "string",
+            "name": "string"
+          }
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
 
