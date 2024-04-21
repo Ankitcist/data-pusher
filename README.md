@@ -18,7 +18,7 @@
     </tr>
     <tr>
       <td>Method</td>
-      <td>"GET"</td>
+      <td>GET</td>
     </tr>
     <tr>
       <td>Query Params</td>
@@ -39,9 +39,14 @@
         </pre>
       </td>
     </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Fetch all accounts</p></td>
+    </tr>
   </tbody>
 </table>
 <hr>
+
 <table>
   <tbody>
     <tr>
@@ -50,7 +55,7 @@
     </tr>
     <tr>
       <td>Method</td>
-      <td>"POST"</td>
+      <td>POST</td>
     </tr>
     <tr>
       <td>Payload</td>
@@ -74,9 +79,14 @@
         </pre>
       </td>
     </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Create account</p></td>
+    </tr>
   </tbody>
 </table>
 <hr>
+
 <table>
   <tbody>
     <tr>
@@ -85,7 +95,7 @@
     </tr>
     <tr>
       <td>Method</td>
-      <td>"PUT"</td>
+      <td>PUT</td>
     </tr>
     <tr>
       <td>Query Params</td>
@@ -113,9 +123,14 @@
         </pre>
       </td>
     </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Update account</p></td>
+    </tr>
   </tbody>
 </table>
 <hr>
+
 <table>
   <tbody>
     <tr>
@@ -124,7 +139,7 @@
     </tr>
     <tr>
       <td>Method</td>
-      <td>"DELETE"</td>
+      <td>DELETE</td>
     </tr>
     <tr>
       <td>Query Params</td>
@@ -152,9 +167,14 @@
         </pre>
       </td>
     </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Delete account</p></td>
+    </tr>
   </tbody>
 </table>
 <hr>
+
 <table>
   <tbody>
     <tr>
@@ -163,7 +183,7 @@
     </tr>
     <tr>
       <td>Method</td>
-      <td>"GET"</td>
+      <td>GET</td>
     </tr>
     <tr>
       <td>Query Params</td>
@@ -185,7 +205,228 @@
         </pre>
       </td>
     </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Fetch all destinations</p></td>
+    </tr>
   </tbody>
 </table>
 <hr>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/destinations/"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>POST</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>
+        <pre>
+          {
+            "account_id": 0,
+            "url": "string",
+            "http_method": "string",
+            "headers": {}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          {
+            "account_id": 0,
+            "url": "string",
+            "http_method": "string",
+            "headers": {}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Create destination</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/destinations/{destination_id}"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>PUT</td>
+    </tr
+    <tr>
+      <td>Query Params</td>
+      <td>destination_id: int</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>
+        <pre>
+          {
+            "account_id": 0,
+            "url": "string",
+            "http_method": "string",
+            "headers": {}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          {
+            "account_id": 0,
+            "url": "string",
+            "http_method": "string",
+            "headers": {}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Update destination</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/destinations/{destination_id}"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>DELETE</td>
+    </tr
+    <tr>
+      <td>Query Params</td>
+      <td>destination_id: int</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>
+        <pre>
+          {
+            "account_id": 0,
+            "url": "string",
+            "http_method": "string",
+            "headers": {}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          {
+            "account_id": 0,
+            "url": "string",
+            "http_method": "string",
+            "headers": {}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>Delete destination</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/destinations/accounts/{account_id}"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>"GET"</td>
+    </tr
+    <tr>
+      <td>Query Params</td>
+      <td>account_id: int</td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          [
+            {
+              "account_id": 0,
+              "url": "string",
+              "http_method": "string",
+              "headers": {}
+            }
+          ]
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>For account_id, fetch all destinations</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/server/incoming_data/"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>POST</td>
+    </tr
+    <tr>
+      <td>Query Params</td>
+      <td>app_secret_token: str</td>
+    </tr>
+    <tr>
+      <td>Payload</td>
+      <td>
+        <pre>
+          {
+            "data": {"key" : "value"}
+          }
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          "Success"
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Explanation</td>
+      <td><p>fetch the account, corresponding to app_secret_token. then fetch all destinations, corresponding to this account, and send the incoming_data to its destinations.</p></td>
+    </tr>
+  </tbody>
+</table>
+
 
