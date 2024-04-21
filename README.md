@@ -424,7 +424,7 @@
     </tr>
     <tr>
       <td>Explanation</td>
-      <td><p>fetch the account, corresponding to app_secret_token. then fetch all destinations, corresponding to this account, and send the incoming_data to its destinations.</p></td>
+      <td><p>fetch the account, corresponding to app_secret_token. then fetch all destinations, corresponding to this account, and send the incoming payload data to its all destinations.</p></td>
     </tr>
   </tbody>
 </table>
