@@ -130,7 +130,6 @@ async def receive_data(incoming_data: schemas.ServerIncomingData, app_secret_tok
     except HTTPException as http_exc:
         raise http_exc
     except Exception as ex:
-        print(ex)
         raise HTTPException(status_code=500, detail="something went wrong")
 
 

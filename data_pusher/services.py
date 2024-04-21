@@ -73,7 +73,6 @@ class DestinationsService:
     
     def send_data_to_destinations(self, data, destinations, db):
         for dest in destinations:
-            print(dest.http_method, dest.url, data.data)
             try:
                 requests.request(method=dest.http_method, url=dest.url, data=data.data)
             except:
