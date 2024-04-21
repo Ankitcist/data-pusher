@@ -155,4 +155,37 @@
   </tbody>
 </table>
 <hr>
+<table>
+  <tbody>
+    <tr>
+      <td>Endpoint</td>
+      <td>"/destinations/"</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td>"GET"</td>
+    </tr>
+    <tr>
+      <td>Query Params</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>
+        <pre>
+          [{
+            "account_id": 3,
+            "url": "https://reqres.in/api/users",
+            "http_method": "POST",
+            "headers": {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer your_app_secret_token_here"
+            }
+          }]
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
 
